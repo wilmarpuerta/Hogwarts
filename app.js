@@ -46,5 +46,80 @@ if ( estudiante.linaje == "Sangre pura" && estudiante.cualidades == "Ambición, 
 const claseTransformaciones = {
     Profesor: "Kevin Slughorn",
     Horario: "16:00",
-    RastrearBoggarts: "Identificar miedos"
+    RastrearBoggarts: true,
+    realizarTransformacionRiddikulu: function(){
+        if(boggart){
+            console.log("encantamiento Riddikulus");
+        }
+    },
+    EnfrentarBoggart: function(boggart){
+        console.log(`Datos originales del boggsrt:${boggart}`);
+        console.log(`El boggart se ha tranformado en ${boggart.transformacion}`);
+    }
 }
+
+// Objeto boggart
+
+const boggart = {
+    transformacion: {
+    aracnofobia: {
+        aspect: "araña",
+        healt: 120,
+        damange: 23,
+        type: "veneno"
+    },
+    coulrofobia: {
+        aspect: "payaso",
+        healt: 100,
+        damange: 30,
+        type: "travesura"
+    },
+    ofidiofobia: {
+        aspect: "serpiente",
+        healt: 90,
+        damange: 25,
+        type: "veneno"
+    },
+    musofobia: {
+        aspect: "ratas",
+        healt: 5,
+        damange: 2,
+        type: "colonia"
+    },
+    dementor: {
+        aspect: "dementor",
+        healt: 150,
+        damange: 30,
+        type: "absorber"
+    }
+}
+}
+
+// BoggartEjemplo
+
+const boggartEjemplo = claseTransformaciones.EnfrentarBoggart(boggart);
+
+// Clase de defensa contra artes oscuras
+
+const defensaContraLasArtesOscuras = {
+    generarPatronus: function(){
+        const animalPatronus = ["Raton","Cisne","Cabra","Fenix","zorro","Liebre","Gato","Lobo","Caballo",""];
+        const random = animalPatronus[Math.floor(Math.random()*animalPatronus.length)];
+        estudiante.animalPatronus = random;
+    }
+}
+
+defensaContraLasArtesOscuras.generarPatronus();
+
+// Funcion dementor
+
+function dementor(){
+    if(estudiante.animalPatronus == ""){
+        console.log(`El estudiante ${estudiante.nombre} no pudo utilizar el hechizo patronus, ha sido absorbido por el dementor y ha sido llevado a la enfermeria`)
+    }
+    else{
+        console.log(`El estudiante ${estudiante.nombre} utilizo el hechizo patronus y su animal fue el ${estudiante.animalPatronus}`)
+    }
+}
+
+dementor();
