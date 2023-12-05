@@ -41,3 +41,10 @@ if ( estudiante.linaje == "Sangre pura" && estudiante.cualidades == "Ambición, 
     estudiante.casa = "Slytherin";
 }
 
+// Definir la clase de Transformaciones
+
+const claseTransformaciones = {
+    Profesor: "Kevin Slughorn",
+    Horario: "16:00",
+    RastrearBoggarts: "Identificar miedos"
+}
