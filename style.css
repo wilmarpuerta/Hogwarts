@@ -1,0 +1,35 @@
+/* Estilos generales */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(https://media.istockphoto.com/id/472809828/es/foto/espacio-profundo.jpg?s=612x612&w=0&k=20&c=pVxXmZrGqIBqd2QjNHqZupJco0mWNagCv9g8TtQSmEU=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos al boton  */
+
+#fondoBoton{
+    height: 95px;
+}
+
+button{
+    position: absolute;
+    top: 88%;
+    padding: 17px;
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+
+/* Estilos a primer fase */
+

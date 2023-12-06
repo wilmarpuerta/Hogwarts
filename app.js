@@ -123,3 +123,5 @@ function dementor(){
 }
 
 dementor();
+
+console.log(estudiante);
