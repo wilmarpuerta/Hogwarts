@@ -2,10 +2,10 @@
 // Datos del estudiante
 
 const estudiante = {
-    nombre: "wilmar",
-    edad: 20,
-    familia: "Puerta",
-    linaje: "muggle",
+    nombre: "",
+    edad: "",
+    familia: "",
+    linaje: "",
     casa: "",
     animalPatronus: "",
     cualidades: "Valor, fuerza, audacia"
@@ -125,3 +125,73 @@ function dementor(){
 dementor();
 
 console.log(estudiante);
+
+/* Inicio de la interaccion */
+
+function inicio(){
+    const leyuza = document.getElementById("leyuza");
+    const fondoBoton = document.getElementById("fondoBoton");
+    const botonInicio = document.getElementById("btn");
+
+  /*   estilos */
+    
+    leyuza.style.display = "none";
+    fondoBoton.style.display = "none";
+    botonInicio.style.display = "none";
+
+    carta()
+}
+
+function carta(){
+    const divCarta = document.getElementById("carta");
+    divCarta.style.display = "flex";
+}
+// pacho ochoa
+
+function formulario(){
+    const divCarta = document.getElementById("carta");
+    divCarta.style.display = "none";
+
+    const divForm = document.getElementById("divForm");
+    divForm.style.display = "block";
+}
+
+function datosEstudiante(e){
+    divForm.style.display = "none";
+    const name = document.getElementById("name");
+    const age = document.getElementById("age");
+    const family = document.getElementById("family");
+    const linaje = document.getElementById("linage");
+
+    estudiante.nombre = name.value;
+    estudiante.edad = age.value;
+    estudiante.familia = family.value;
+
+    if (linaje.value == "muggle"){
+        estudiante.linaje = "muggle";
+    }
+    if (linaje.value == "mestizo"){
+        estudiante.linaje = "mestizo";
+    }
+    if (linaje.value == "sangrePura"){
+        estudiante.linaje = "sangrePura";
+    }
+
+
+
+    bienvenida();
+    e.preventDefault();
+}
+
+function bienvenida(){
+    const divMensaje = document.getElementById("bienvenida");
+    divMensaje.style.display = "block";
+    
+    const pBienvenida = document.createElement("p");
+    pBienvenida.innerHTML = `Hola ${estudiante.nombre} te damos una calurosa bienvenida a Hogwart`;
+
+    const newBtn = document.createElement("button");
+    newBtn.textContent = "clases";
+
+    divMensaje.append(pBienvenida,newBtn);
+}

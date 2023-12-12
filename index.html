@@ -14,6 +14,37 @@
       src="https://i.postimg.cc/XqWn6GdD/Carta-hogwart-removebg-preview.png"
       alt=""
     />
-    <button id="btn" onclick="">Iniciar</button>
+    <button id="btn" onclick="inicio()">Iniciar</button>
+    <div id="carta">
+      <img
+        src="https://i.postimg.cc/jd4Stbxk/Carta-hogwart-removebg-preview-1.png"
+        alt=""
+      />
+      <h1>Carta de Hogwarts</h1>
+      <p>
+        Estas en proceso de selecion para asistir a la academia Hogwarts de
+        magia y hechiceria pero primero debes que rellenar el siguiente
+        formulario.
+      </p>
+      <button id="btnFormulario" onclick="formulario()">Formulario</button>
+    </div>
+    <div id="divForm" class="formulario">
+      <form id="formulario" action="">
+        <label for="name">Nombre</label>
+        <input id="name" type="text" />
+        <label for="age">Edad</label>
+        <input id="age" type="number" />
+        <label for="family">Familia</label>
+        <input id="family" type="text" placeholder="Apellido" />
+        <label for="linaje">Linaje</label>
+        <select name="linaje" id="linage">
+          <option value="muggle">Muggle</option>
+          <option value="mestizo">Mestizo</option>
+          <option value="sangrePura">Sangre pura</option>
+        </select>
+      </form>
+      <button onclick="datosEstudiante()">Enviar</button>
+    </div>
+    <div id="bienvenida"></div>
   </body>
 </html>

@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/lionel-virgi');
 /* Estilos generales */
 
 *{
@@ -14,22 +15,100 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Estilos al boton  */
 
 #fondoBoton{
-    height: 95px;
+    height: 120px;
 }
 
-button{
+#btn{
     position: absolute;
-    top: 88%;
-    padding: 17px;
+    top: 85.4%;
+    padding: 17px 50px;
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 55px;
+    cursor: pointer;
+    font-family: 'LIONEL VIRGI', sans-serif;
+}
+
+#btn:focus{
+    color: white;
 }
 
 /* Estilos a primer fase */
 
+#carta{
+    flex-direction: column;
+    display: none;
+    height: 90%;
+    align-items: center;
+}
+
+#carta img{
+    height: 100%;
+}
+
+#carta h1{
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 37%;
+    font-size: 40px;
+}
+
+#carta p{
+    position: absolute;
+    width: 25%;
+    font-size: 25px;
+    top: 35%;
+    left: 37%;
+}
+
+#btnFormulario{
+    width: 100px;
+    position: absolute;
+    bottom: 150px;
+    padding: 10px;
+    background: none;
+}
+
+#divForm{
+    display: none;
+    background-color: antiquewhite;
+    padding: 20px 50px;
+    border-radius: 10px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formulario label{
+    font-size: 20px;
+}
+
+#formulario input{
+    height: 25px;
+    padding-left: 5px;
+}
+
+#divForm button{
+    position: relative;
+    left: 40%;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+
+#bienvenida{
+    width: 400px;
+    height: 400px;
+    background-color: antiquewhite;
+    display: none;
+}
